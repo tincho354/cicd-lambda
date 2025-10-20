@@ -1,19 +1,14 @@
 version: 0.2
-
 phases:
   install:
     runtime-versions:
       nodejs: 20
-    commands:
-      - echo "Instalando dependencias (si las hubiera)..."
-      - npm install
   build:
     commands:
-      - echo "Empaquetando Lambda..."
-      - zip -r function.zip index.js node_modules/
-  post_build:
-    commands:
-      - echo "Build completado exitosamente"
+      - echo "Build listo; no zipeamos manualmente"
 artifacts:
   files:
-    - function.zip
+    - index.js
+    - node_modules/**/*   # si no tenés deps, podés quitar esta línea
+  discard-paths: yes
+  name: function.zip
