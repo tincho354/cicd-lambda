@@ -5,7 +5,7 @@ exports.handler = async (event) => {
     statusCode: 200,
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      message: "Hola Mundo desde AWS Lambda 🚀",
+      message: "Hola Mundo desde AWS Lambda 🚀 desplegada con CICD codepipeline",
       timestamp: new Date().toISOString(),
     }),
   };
