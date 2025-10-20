@@ -1,0 +1,11 @@
+{
+  "name": "lambda-hello",
+  "version": "1.0.0",
+  "description": "Lambda básica Hola Mundo desplegada con CodePipeline y CodeBuild",
+  "main": "index.js",
+  "scripts": {
+    "build": "zip -r function.zip index.js node_modules"
+  },
+  "author": "Martin Osella",
+  "license": "MIT"
+}
